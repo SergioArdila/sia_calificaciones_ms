@@ -28,7 +28,7 @@ namespace SIA.Calificaciones.Service.Repositories
         public GradesRepository()
         {
 
-            var mongoClient = new MongoClient("mongodb://mongodb:27017");
+            var mongoClient = new MongoClient("mongodb://localhost:27017");
             var database = mongoClient.GetDatabase("SIA_InfoAcademica_db");
             dbCollectionGrades = database.GetCollection<Grade>(collectionNameGrades);
             dbCollectionHistory = database.GetCollection<History>(collectionNameHistory);
